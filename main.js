@@ -27,8 +27,18 @@ darkBtnToggle.addEventListener('click', () => {
 
 const scrollTop = document.querySelector('#to-top');
 
+// window.onscroll = () => {
+//     this.scrollY >= 800 ? scrollTop.classList.add('show-btn') : scrollTop.classList.remove('show-btn')
+// };
+
 window.onscroll = () => {
-    this.scrollY >= 800 ? scrollTop.classList.add('show-btn') : scrollTop.classList.remove('show-btn')
+    if(this.scrollY >= 800) {
+        scrollTop.style.visibility = 'visible';  
+        scrollTop.style.bottom = '20px';  
+    } else {
+        scrollTop.style.visibility = 'hidden';  
+        scrollTop.style.bottom = '-50px';  
+    };
 };
 
 scrollTop.addEventListener('click',()=>{
