@@ -22,3 +22,18 @@ darkBtnToggle.addEventListener('click', () => {
         disableDark();
     }
 });
+
+// scroll to top 
+
+const scrollTop = document.querySelector('#to-top');
+
+window.onscroll = () => {
+    this.scrollY >= 800 ? scrollTop.classList.add('show-btn') : scrollTop.classList.remove('show-btn')
+};
+
+scrollTop.addEventListener('click',()=>{
+    window.scrollTo({
+        top: 0,
+        behavior:'smooth'
+    })
+});
