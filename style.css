@@ -67,6 +67,11 @@ header {
 	width: 80%;
 	padding-right: 20px;
 }
+
+#mode-switch{
+	transition: all .2s ease-in-out;
+} 
+
 .site-nav ul {
 	display: flex;
 	padding: 0 10px;

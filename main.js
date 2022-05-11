@@ -4,10 +4,13 @@ const darkBtnToggle = document.querySelector('#mode-switch');
 const enableDark = () => {
     document.body.classList.add('dark-mode');
     localStorage.setItem('darkMode', 'enabled');
+    darkBtnToggle.children[0].innerText = 'light_mode';
 }
 const disableDark = () => {
     document.body.classList.remove('dark-mode');
+    darkBtnToggle.children[0].innerText = 'dark_mode';
     localStorage.setItem('darkMode', null);
+
 }
 
 if (darkMode === 'enabled'){
