@@ -30,13 +30,40 @@
 						<li><a href="#">Workshops</a></li>
 						<li><a href="#">Contact Us</a></li>
 						<li>
-							<button id="mode-switch">
+							<button id="mode-switch"  onclick="myFunction()" >
 								<span class="material-symbols-outlined">dark_mode</span>
 							</button>
 						</li>
 					</ul>
 				</nav>
 			</div>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+			<script>
+				function myFunction() {
+				   var element = document.body;
+				   element.classList.toggle("dark-mode");}
+
+
+				   var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+			</script>
+
 			<div class="site-hero">
 				<h1>Arab Digital Expression Foundation</h1>
 				<a href="#">Contact Us</a>
