@@ -24,3 +24,20 @@ window.onscroll = ()=> {
 const gotToTop = ()=> {
   document.documentElement.scrollTop = 0
 }
+
+const loadingBtn = document.querySelector('#loading');
+let currentItem = 3;
+
+loadingBtn.onclick = () => {
+
+  const items = [...document.querySelectorAll('#row .workshops_item')];
+  for (let i= currentItem; i < currentItem + 3; i++){
+    items[i].style.display = 'block';
+  }
+  currentItem+=3;
+
+  if (currentItem >= items.length){
+    loadingBtn.style.display = 'none';
+  }
+
+};

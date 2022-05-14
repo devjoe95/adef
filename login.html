@@ -38,5 +38,17 @@
 			</div>
 		</div>
 	</body>
-
+	<script>
+		function togglePassword(){
+			const visibilityBtn = document.getElementById('toggle-password');
+			let inputType = document.getElementById('password');
+			if (visibilityBtn.innerText !== 'visibility'){
+				visibilityBtn.innerText = 'visibility';
+				inputType.type = 'password';
+			} else {
+				visibilityBtn.innerText = 'visibility_off';
+				inputType.type = 'text';
+			}
+		}
+	</script>
 </html>
