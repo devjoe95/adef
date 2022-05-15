@@ -24,3 +24,24 @@ window.onscroll = ()=> {
 const gotToTop = ()=> {
   document.documentElement.scrollTop = 0
 }
+
+// load more functionality:
+const loadButton = document.getElementById("load-switch");
+
+loadButton.onclick = ()=> {
+  const items = document.querySelectorAll('.workshops_item_hidden')
+
+  items.forEach((item)=> {
+    
+    if (item.style.display === "block") {
+      item.style.display = "none";
+     
+     } else {
+      item.style.display = "block";
+      
+    }
+    
+  })
+
+  loadButton.style.display = 'none';
+}
